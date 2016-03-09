@@ -1,0 +1,123 @@
+\documentclass[xcolor=table]{beamer}
+\usepackage{beamerthemesplit} % kam neu dazu
+\usepackage[ngerman]{babel}
+\usepackage[utf8x]{inputenc}
+ \usepackage{multirow}
+\begin{document}
+\title{OSI-Modell} 
+\author{Jörg Reuter}
+\date{\today} 
+
+\frame{\titlepage} 
+
+\frame{\frametitle{Inhaltsverzeichnis}\tableofcontents} 
+
+\section{TCP/IP- vs. OSI-Modell} 
+\frame{\frametitle{OSI-Modell} 
+\begin{table}[c]
+\centering
+\label{my-label}
+
+\begin{tabular}{l}
+\hline
+\multicolumn{1}{|l|}{Anwendungsschicht} \\ \hline
+\multicolumn{1}{|l|}{Darstellungsschicht}\\ \hline
+\multicolumn{1}{|l|}{Sitzungsschicht}\\ \hline
+\multicolumn{1}{|l|}{Transportschicht}\\ \hline
+\multicolumn{1}{|l|}{Netzwerkschicht}\\ \hline
+\multicolumn{1}{|l|}{Sicherungsschicht} \\ \hline
+\multicolumn{1}{|l|}{Bitübertragungsschicht}\\ \hline
+\end{tabular}
+\end{table}
+}
+\frame{\frametitle{TCP/IP-Modell}
+\begin{table}[]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{00D2CB} 
+Anwendungsschicht & \cellcolor[HTML]{00D2CB} \\ \cline{1-1}
+\rowcolor[HTML]{00D2CB} 
+Darstellungsschicht & \cellcolor[HTML]{00D2CB} \\ \cline{1-1}
+\rowcolor[HTML]{00D2CB} 
+Sitzungsschicht & \multirow{-3}{*}{\cellcolor[HTML]{00D2CB}Applikationsschicht} \\ \hline
+\rowcolor[HTML]{FCFF2F} 
+Transportschicht & Transportschicht \\ \hline
+\rowcolor[HTML]{FFFC9E} 
+Netzwerkschicht & Internetschicht \\ \hline
+\rowcolor[HTML]{FD6864} 
+Sicherungsschicht & \cellcolor[HTML]{FD6864} \\ \cline{1-1}
+\rowcolor[HTML]{FD6864} 
+Bitübertragungsschicht & \multirow{-2}{*}{\cellcolor[HTML]{FD6864}Netzwerkschicht} \\ \hline
+\end{tabular}
+\end{table}
+}
+
+
+\frame{\frametitle{Erweiterung TCP/IP-Modell}
+\begin{table}[]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|l}
+\cline{1-2}
+\rowcolor[HTML]{00D2CB} 
+Anwendungsschicht & \cellcolor[HTML]{00D2CB} & \cellcolor[HTML]{00D2CB} \\ \cline{1-1}
+\rowcolor[HTML]{00D2CB} 
+Darstellungsschicht & \cellcolor[HTML]{00D2CB} & \cellcolor[HTML]{00D2CB} \\ \cline{1-1}
+\rowcolor[HTML]{00D2CB} 
+Sitzungsschicht & \multirow{-3}{*}{\cellcolor[HTML]{00D2CB}Applikationsschicht} & \multirow{-3}{*}{\cellcolor[HTML]{00D2CB}Applikationsschicht} \\ \cline{1-2}
+\rowcolor[HTML]{FCFF2F} 
+Transportschicht & Transportschicht & Transportschicht \\ \cline{1-2}
+\rowcolor[HTML]{FFFC9E} 
+Netzwerkschicht & Internetschicht & Internetschicht \\ \cline{1-2}
+\rowcolor[HTML]{FD6864} 
+Sicherungsschicht & \cellcolor[HTML]{FD6864} & Sicherungsschicht \\ \cline{1-1}
+\rowcolor[HTML]{FD6864} 
+Bitübertragungsschicht & \multirow{-2}{*}{\cellcolor[HTML]{FD6864}Netzwerkschicht} & Bitübertragungsschicht \\ \cline{1-2}
+\end{tabular}
+\end{table}
+ }
+ 
+\frame{\frametitle{Erweitertes TCP/IP-Modell}
+
+\begin{table}[]
+\centering
+\label{my-label}
+\begin{tabular}{|l|}
+\hline
+\rowcolor[HTML]{00D2CB} 
+Applikationsschicht \\ \hline
+\rowcolor[HTML]{FCFF2F} 
+Transportschicht \\ \hline
+\rowcolor[HTML]{FFFC9E} 
+Internetschicht \\ \hline
+\rowcolor[HTML]{FD6864} 
+Sicherungsschicht \\ \hline
+\rowcolor[HTML]{FD6864} 
+Bitübertragungsschicht \\ \hline
+\end{tabular}
+\end{table}
+ }
+
+\frame{\frametitle{Aufteilen der Anwendungsdaten}
+
+\begin{table}[]
+\centering
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{00D2CB} 
+ & Applikationsschicht \\ \hline
+\rowcolor[HTML]{FCFF2F} 
+Segmente & Transportschicht \\ \hline
+\rowcolor[HTML]{FFFC9E} 
+Pakete & Internetschicht \\ \hline
+\rowcolor[HTML]{FD6864} 
+Frames & Sicherungsschicht \\ \hline
+\rowcolor[HTML]{FD6864} 
+Bits & Bitübertragungsschicht \\ \hline
+\end{tabular}
+\end{table}
+}
+\end{document}
